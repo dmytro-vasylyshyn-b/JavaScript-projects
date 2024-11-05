@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager з Колонками</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task-manager">
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Нове завдання...">
+            <button id="add-task-button">Додати завдання</button>
+            <select id="sort-options">
+                <option value="date">Сортувати за датою</option>
+                <option value="alphabetical">Сортувати за алфавітом</option>
+            </select>
+        </div>
+        
+        <div class="columns">
+            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>To Do</h2>
+            </div>
+            <div class="column" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>In Progress</h2>
+            </div>
+            <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Done</h2>
+            </div>
+        </div>
+        <button class="delete-btn" id="delete-all-task-button"> Очистити всі двні</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
