@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розумна Тумбоччка
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Де поділись гроші?</h1>
+      <form id="expense-form">
+          <input type="text" id="expense-name" placeholder="Нащо?" required>
+          <input type="number" id="expense-amount" placeholder="Скільки?" required>
+          <input type="hidden" id="expense-id">
+          <button type="submit" id="submit-button">Додати</button>
+      </form>
+
+        <div class="wasted">
+            <div class="blac_background_for_wsted">
+                <img src="images/waste.png" id= wasted_image>
+            </div>
+            <h2>- <span id="total-expenses">0</span>$</h2>
+        </div>
+        <ul id="expense-list"></ul>
+
+        <canvas id="expense-chart"></canvas>
+
+        <canvas id="expense-pie-chart"></canvas>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
